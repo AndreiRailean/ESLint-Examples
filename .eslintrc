@@ -1,6 +1,11 @@
 {
-    "extends": "standard",
-    "plugins": [
-        "standard"
-    ]
+  "extends": "standard",
+  "plugins": [
+      "standard"
+  ],
+  "rules": {
+    "prefer-arrow-callback": 1,
+    "arrow-parens": 2,
+  },
+
 }
