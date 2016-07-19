@@ -4,7 +4,10 @@
   "description": "Examples of using eslint in a JavaScript project",
   "main": "app.js",
   "scripts": {
-    "test": "eslint .",
+    "test": "npm run lint",
+    "lint": "eslint .",
+    "lint:fix": "npm run lint -- --fix",
+    "lint:changed": "LIST=`git diff-index --name-only HEAD | grep '.jsx\\{0,1\\}'$`; if [ \"$LIST\" ]; then eslint $LIST; fi",
     "start": "babel-node app.js"
   },
   "keywords": [

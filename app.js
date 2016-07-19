@@ -1,9 +1,9 @@
 'use strict'
 
-const scores = [1, 2, 3]
+import { primes } from './numbers'
 
-const doubles = scores.map(function (x) {
-  return x + x
+const squares = primes.map(function (x) {
+  return x * x
 })
 
-console.log(scores, doubles)
+console.log(primes, squares)
