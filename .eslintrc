@@ -6,6 +6,5 @@
   "rules": {
     "prefer-arrow-callback": 2,
     "arrow-parens": 2,
-  },
-
+  }
 }
