@@ -4,8 +4,22 @@ by Andrei Railean
 
 http://twitter.com/andrei_md
 
-Code is in branches
+Code in branches is meant to be used for demo purposes as a progression of steps a project may go through in adopting ESLint
 
+TODO: expand with more info
+
+### Overview
+- Why care about coding standards
+- Effort involved in setting up
+- Using ESLint to help introduce new tech
+- Minimise merge conflicts
+- Automatic code fixes
+
+### Demo
+- Step-by-step upgrading to ES6
+- Linting only changed files
+- Adding a pre-commit hook
+- Linting tests and separate config
 
 ## References
 
