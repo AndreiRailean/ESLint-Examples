@@ -4,18 +4,35 @@
   "description": "Examples of using eslint in a JavaScript project",
   "main": "app.js",
   "scripts": {
-    "test": "eslint ."
+    "test": "mocha --opts mocha.opts test",
+    "lint": "eslint .",
+    "lint:fix": "npm run lint -- --fix",
+    "lint:changed": "LIST=`git diff-index --name-only HEAD | grep '.jsx\\{0,1\\}'$`; if [ \"$LIST\" ]; then eslint $LIST; fi",
+    "start": "babel-node app.js"
   },
   "keywords": [
     "eslint",
     "javascript"
   ],
+  "precommit": {
+    "run": [
+      "lint:changed"
+    ]
+  },
   "author": "Andrei Railean <andrei@siter.com.au> (http://www.siter.com.au/)",
   "license": "CC-BY-4.0",
   "devDependencies": {
+    "babel-cli": "6.10.1",
+    "babel-preset-es2015": "6.9.0",
+    "babel-preset-stage-0": "6.5.0",
+    "babel-register": "6.9.0",
+    "chai": "*",
     "eslint": "3.1.1",
     "eslint-config-standard": "5.3.5",
+    "eslint-plugin-mocha": "4.0.0",
     "eslint-plugin-promise": "2.0.0",
-    "eslint-plugin-standard": "2.0.0"
+    "eslint-plugin-standard": "2.0.0",
+    "mocha": "*",
+    "pre-commit": "1.1.3"
   }
 }

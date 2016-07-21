@@ -1,26 +1,9 @@
-var foo
+'use strict'
 
-var myArray = [
-  'a',
-  'b',
-   'c'
-  ]
+import { primes } from './numbers'
 
-var myObject = {
-  'name' : 'Object' ,
-  purpose: 'Testing',
-  "version" :1
-}
+const squares = primes.map(function (x) {
+  return x * x
+})
 
-
-function addTwo(one,two){
-  var sum = one+two
-  return
-}
-
-
-function getGreeting(name) {
-  return ('Hello, '+name + '! Write good code, please!');
-}
-
-console.log(getGreeting('SydJS'));
+console.log(primes, squares)
